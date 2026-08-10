@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude connector — Penopta</title>
+  <meta name="description" content="Connect Claude to Penopta via MCP: OAuth sign-in, project context in chat, and optional hourly sync.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/favicon.png" type="image/png" sizes="380x380">
+  <link rel="apple-touch-icon" href="../../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css?v=8">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="logo" aria-label="Penopta home">
+        <img src="../../assets/logo.png" alt="Penopta" class="logo__img">
+      </a>
+      <nav class="nav__links">
+        <a href="https://app.penopta.com" class="nav__link">Log in</a>
+        <span class="nav__sep">·</span>
+        <a href="https://app.penopta.com" class="nav__link nav__link--cta">Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="container legal__inner">
+      <p class="legal__eyebrow">Integrations</p>
+      <h1 class="legal__title">Claude connector</h1>
+      <p class="legal__meta">
+        Use Penopta from Claude.ai, Claude Desktop, Claude Code, and Cowork through a remote MCP
+        connector authenticated with Sign in with Penopta.
+      </p>
+
+      <div class="legal__body">
+        <h2>What it does</h2>
+        <p>
+          The Penopta connector lets Claude verify your workspace connection, list and search
+          projects and threads, pull project context into chat, sync opted-in Claude project
+          transcripts, and track the current conversation on demand.
+        </p>
+        <ul>
+          <li><strong>Identity</strong> — OAuth (Sign in with Penopta). No API key to paste.</li>
+          <li><strong>Scope</strong> — Your active Penopta organization.</li>
+          <li><strong>Privacy</strong> — Transcript sync only covers projects you choose to track.
+            Projects named with a <code>P:</code> or <code>Private:</code> prefix are never
+            registered or synced.</li>
+        </ul>
+
+        <h2>MCP server URL</h2>
+        <p>
+          Remote server (Streamable HTTP):
+          <br>
+          <code>https://app.penopta.com/api/mcp</code>
+        </p>
+
+        <h2>Install in Claude.ai / Desktop</h2>
+        <ol>
+          <li>Open <strong>Settings</strong> → <strong>Connectors</strong>.</li>
+          <li>
+            Prefer <strong>Penopta</strong> from the Connectors directory when it is listed.
+            Otherwise choose <strong>Add</strong> → <strong>Add custom connector</strong>.
+          </li>
+          <li>Name it <strong>Penopta</strong> and paste the MCP server URL above if adding custom.</li>
+          <li>Approve the <strong>Sign in with Penopta</strong> prompt.</li>
+          <li>
+            In a new chat, ask Claude to verify the connection
+            (e.g. “Run penopta_verify tool”).
+          </li>
+        </ol>
+        <p>
+          Guided setup inside the product:
+          <a href="https://app.penopta.com/integrations/claude">app.penopta.com/integrations/claude</a>
+          (sign-in required).
+        </p>
+
+        <h2>Optional hourly sync</h2>
+        <p>
+          To keep Claude.ai project threads flowing into Penopta on a schedule:
+        </p>
+        <ol>
+          <li>
+            Install
+            <a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn?hl=en-US">Claude in Chrome</a>
+            and stay signed in (used to list claude.ai projects and threads).
+          </li>
+          <li>
+            In the Claude desktop app, create a Skill with the instructions from the Penopta
+            Claude integrations page.
+          </li>
+          <li>Create an hourly scheduled task that runs that skill.</li>
+          <li>
+            Run the task once and choose <strong>Always allow</strong> for Penopta and Chrome
+            tools so unattended runs can finish.
+          </li>
+        </ol>
+
+        <h2>Claude Code / Cowork plugin</h2>
+        <p>
+          For Claude Code and Cowork, install the Penopta plugin (skills + the same remote MCP).
+          The plugin points at this connector so you get context skills without pasting a URL.
+          See the plugin README in the Penopta app repository under
+          <code>plugins/claude/</code>.
+        </p>
+
+        <h2>Privacy &amp; support</h2>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li>Support: <a href="mailto:support@penopta.com">support@penopta.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="logo" aria-label="Penopta home">
+        <img src="../../assets/logo.png" alt="Penopta" class="logo__img">
+      </a>
+      <p class="footer__tagline"><em>Penopta — multiplayer for your team's agents.</em></p>
+      <nav class="footer__links" aria-label="Legal">
+        <a href="/support">Support</a>
+        <span class="nav__sep">·</span>
+        <a href="/privacy">Privacy</a>
+        <span class="nav__sep">·</span>
+        <a href="/terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
