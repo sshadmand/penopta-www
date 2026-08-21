@@ -377,6 +377,253 @@ body {
   margin-top: 3rem;
 }
 
+/* Aggregate stats */
+
+.stats {
+  padding: var(--section-y) 0;
+}
+
+.stats-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--white);
+}
+
+.stats-panel__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.stats-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  background: var(--cream-light);
+}
+
+.stats-chip--muted {
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.stats-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  background: var(--cream-light);
+}
+
+.stats-card__label {
+  margin: 0;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+
+.stats-card__value {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-panel__caption {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  letter-spacing: -0.015em;
+}
+
+.stats-heat__months,
+.stats-heat__grid {
+  display: flex;
+  gap: 3px;
+}
+
+.stats-heat__months span,
+.stats-heat__days span {
+  font-size: 0.5625rem;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.stats-heat__months {
+  margin-bottom: 0.35rem;
+  min-height: 0.75rem;
+}
+
+.stats-heat__months span,
+.stats-heat__week,
+.stats-heat__days {
+  flex: 1;
+  min-width: 0;
+}
+
+.stats-heat__spacer {
+  flex: 0 0 0.875rem;
+  max-width: 0.875rem;
+}
+
+.stats-heat__days {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 0.875rem;
+  max-width: 0.875rem;
+  padding-right: 2px;
+  text-align: right;
+}
+
+.stats-heat__days span {
+  height: 0.7rem;
+}
+
+.stats-heat__week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stats-heat__week i,
+.stats-heat__legend i {
+  display: block;
+  font-style: normal;
+  border-radius: 2px;
+}
+
+.stats-heat__week i {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.stats-heat i.h0 { background: var(--border); }
+.stats-heat i.h1 { background: var(--orange-tint); }
+.stats-heat i.h2 { background: #f5a574; }
+.stats-heat i.h3 { background: var(--orange); }
+.stats-heat i.h4 { background: var(--orange-dark); }
+
+.stats-heat__legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+  color: var(--muted);
+}
+
+.stats-heat__legend i {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.stats-effort {
+  margin-top: 0.5rem;
+}
+
+.stats-effort__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.stats-effort__head .stats-panel__caption {
+  margin: 0;
+}
+
+.stats-lenses {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.stats-lens {
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.stats-lens--active {
+  border-color: transparent;
+  background: var(--black);
+  color: var(--white);
+}
+
+.stats-bars {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.stats-bars__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.stats-bars__meta span:first-child {
+  color: var(--muted);
+}
+
+.stats-bars__meta span:last-child {
+  font-variant-numeric: tabular-nums;
+  color: var(--black);
+}
+
+.stats-bars__track {
+  height: 0.625rem;
+  border-radius: 3px;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.stats-bars__track span {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--black);
+}
+
+.stats-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+
+.stats-points {
+  margin-top: 1.75rem;
+}
+
 /* Features */
 
 .features {
@@ -581,6 +828,14 @@ body {
 
   .card-grid--3 {
     grid-template-columns: 1fr;
+  }
+
+  .stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-chip--muted {
+    margin-left: 0;
   }
 
   .feature-row,

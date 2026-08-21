@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -37,7 +37,7 @@
           <h1 class="hero__headline">Bring your team's agents into one room.</h1>
           <p class="hero__description">
             Connect the Claude and ChatGPT threads your team already runs into one shared project.
-            Every agent gets the full context, and anyone can jump in.
+            Share context across agents — and see the team's effort as one set of stats.
           </p>
           <a href="https://app.penopta.com" class="btn">Start your first project</a>
         </div>
@@ -47,12 +47,174 @@
           class="hero__mockup"
         >
         <p class="hero__caption">
-          A shared workspace for the agents your team already uses.
+          A shared workspace — and one view of the team's agent effort.
         </p>
       </div>
     </section>
 
-    <!-- 3. Problem / Solution -->
+  
+
+    <!-- 3. Aggregate stats -->
+    <section class="stats">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="chip">Analytics</span>
+          <h2>See the team's agent work as one picture.</h2>
+          <p class="section-header__description">
+            Estimated tokens, sessions, and effort — rolled up across every connected thread.
+            Filter by person, plan, or agent. Not a usage page per tool.
+          </p>
+        </div>
+
+        <div
+          class="stats-panel"
+          role="img"
+          aria-label="Example workspace analytics: sessions, messages, estimated tokens, a six-month activity heatmap, and effort by plan"
+        >
+          <div class="stats-panel__toolbar">
+            <span class="stats-chip">All people</span>
+            <span class="stats-chip">All agents</span>
+            <span class="stats-chip stats-chip--muted">6 months</span>
+          </div>
+
+          <div class="stats-cards">
+            <div class="stats-card">
+              <p class="stats-card__label">Sessions</p>
+              <p class="stats-card__value">1,284</p>
+            </div>
+            <div class="stats-card">
+              <p class="stats-card__label">Messages</p>
+              <p class="stats-card__value">8,412</p>
+            </div>
+            <div class="stats-card">
+              <p class="stats-card__label">Total tokens</p>
+              <p class="stats-card__value">12.4M</p>
+            </div>
+            <div class="stats-card">
+              <p class="stats-card__label">Active days</p>
+              <p class="stats-card__value">142</p>
+            </div>
+          </div>
+
+          <p class="stats-panel__caption">Token usage, last 6 months</p>
+          <div class="stats-heat" aria-hidden="true">
+            <div class="stats-heat__months">
+              <span class="stats-heat__spacer"></span>
+              <span>Mar</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Apr</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>May</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Jun</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Jul</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Aug</span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="stats-heat__grid">
+              <div class="stats-heat__days"><span>M</span><span></span><span>W</span><span></span><span>F</span><span></span><span></span></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h3"></i><i class="h3"></i><i class="h2"></i><i class="h1"></i><i class="h1"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h1"></i><i class="h1"></i><i class="h0"></i><i class="h4"></i><i class="h1"></i><i class="h2"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h0"></i><i class="h2"></i><i class="h2"></i><i class="h0"></i><i class="h2"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h3"></i><i class="h1"></i><i class="h4"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h1"></i><i class="h0"></i><i class="h4"></i><i class="h1"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h4"></i><i class="h4"></i><i class="h3"></i><i class="h3"></i><i class="h3"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h4"></i><i class="h1"></i><i class="h4"></i><i class="h4"></i><i class="h0"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h2"></i><i class="h4"></i><i class="h2"></i><i class="h0"></i><i class="h0"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h1"></i><i class="h1"></i><i class="h1"></i><i class="h1"></i><i class="h0"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h3"></i><i class="h4"></i><i class="h4"></i><i class="h2"></i><i class="h2"></i><i class="h2"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h4"></i><i class="h2"></i><i class="h2"></i><i class="h1"></i><i class="h2"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h0"></i><i class="h3"></i><i class="h3"></i><i class="h2"></i><i class="h4"></i><i class="h0"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i><i class="h2"></i><i class="h2"></i><i class="h2"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h2"></i><i class="h1"></i><i class="h4"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h4"></i><i class="h3"></i><i class="h4"></i><i class="h3"></i><i class="h0"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h4"></i><i class="h1"></i><i class="h2"></i><i class="h1"></i><i class="h3"></i><i class="h0"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h4"></i><i class="h0"></i><i class="h3"></i><i class="h3"></i><i class="h4"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h4"></i><i class="h4"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h2"></i><i class="h1"></i><i class="h4"></i><i class="h3"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h3"></i><i class="h2"></i><i class="h2"></i><i class="h2"></i><i class="h2"></i><i class="h1"></i><i class="h1"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h3"></i><i class="h4"></i><i class="h4"></i><i class="h4"></i><i class="h0"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h4"></i><i class="h2"></i><i class="h3"></i><i class="h2"></i><i class="h1"></i><i class="h0"></i></div>
+              <div class="stats-heat__week"><i class="h1"></i><i class="h2"></i><i class="h2"></i><i class="h4"></i><i class="h2"></i><i class="h0"></i><i class="h0"></i></div>
+            </div>
+            <div class="stats-heat__legend">
+              <span>Less</span>
+              <i class="h0"></i><i class="h1"></i><i class="h2"></i><i class="h3"></i><i class="h4"></i>
+              <span>More</span>
+            </div>
+          </div>
+
+          <div class="stats-effort">
+            <div class="stats-effort__head">
+              <p class="stats-panel__caption">Estimated tokens by plan</p>
+              <div class="stats-lenses">
+                <span class="stats-lens stats-lens--active">Plans</span>
+                <span class="stats-lens">People</span>
+                <span class="stats-lens">Agents</span>
+              </div>
+            </div>
+            <ul class="stats-bars">
+              <li>
+                <div class="stats-bars__meta"><span>Auth flow</span><span>2.1M</span></div>
+                <div class="stats-bars__track"><span style="width:100%"></span></div>
+              </li>
+              <li>
+                <div class="stats-bars__meta"><span>Checkout</span><span>1.4M</span></div>
+                <div class="stats-bars__track"><span style="width:67%"></span></div>
+              </li>
+              <li>
+                <div class="stats-bars__meta"><span>Onboarding</span><span>890k</span></div>
+                <div class="stats-bars__track"><span style="width:42%"></span></div>
+              </li>
+              <li>
+                <div class="stats-bars__meta"><span>Search</span><span>640k</span></div>
+                <div class="stats-bars__track"><span style="width:30%"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="stats-note">
+          Tokens are estimated from connected threads. Provider billing is not stored.
+        </p>
+
+        <div class="card-grid card-grid--3 stats-points">
+          <article class="card card--vertical">
+            <h3>One picture for the team</h3>
+            <p>Claude and ChatGPT in the same view. Filter one person or the whole workspace.</p>
+          </article>
+          <article class="card card--vertical">
+            <h3>See where effort went</h3>
+            <p>Break down estimated tokens by plan, person, agent, and project — not just a total.</p>
+          </article>
+          <article class="card card--vertical">
+            <h3>Ask the numbers</h3>
+            <p>Ask what the team ran last week, and which plan used the most tokens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Problem / Solution -->
     <section class="problem-solution">
       <div class="container problem-solution__inner">
         <p class="problem-solution__label">Problem &amp; solution</p>
@@ -60,19 +222,20 @@
           <p class="problem-solution__paragraph">
             <strong>Every agent your team uses runs in its own box.</strong>
             You get answers only you can see, while your teammates run the same prompts three feet away,
-            blind to each other. The real work ends up scattered across a thousand private threads that never talk.
+            blind to each other. The real work ends up scattered across a thousand private threads that never talk —
+            and there's no one picture of what it all cost in time or tokens.
           </p>
           <p class="problem-solution__paragraph">
             <strong>Penopta puts those threads in one shared project.</strong>
             Your agents can see each other's work, your teammates can watch it happen,
-            and anyone can ask the whole project a question. It's the jump from single-player to multiplayer,
-            for the way your team already works with AI.
+            and anyone can ask the whole project a question. You also get the team's effort in aggregate —
+            estimated tokens, plans, and people — instead of a usage page per tool.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 4. How It Works -->
+    <!-- 5. How It Works -->
     <section class="how-it-works">
       <div class="container">
         <div class="section-header section-header--center">
@@ -104,14 +267,14 @@
       </div>
     </section>
 
-    <!-- 5. Features -->
+    <!-- 6. Features -->
     <section class="features">
       <div class="container">
         <div class="section-header section-header--center">
           <span class="chip">Features</span>
           <h2>Everything your team's agents do, finally in one place.</h2>
           <p class="section-header__description">
-            Shared visibility, shared context, and answers that draw from all the work at once.
+            Shared visibility, shared context, one set of stats, and answers that draw from all the work at once.
           </p>
         </div>
 
@@ -152,7 +315,7 @@
       </div>
     </section>
 
-    <!-- 6. FAQ -->
+    <!-- 7. FAQ -->
     <section class="faq">
       <div class="container">
         <div class="section-header section-header--center">
@@ -176,13 +339,20 @@
             <dt>Do I need to change how I work?</dt>
             <dd>No. Keep using the agents you already use, we just connect them.</dd>
           </div>
+          <div class="faq-item">
+            <dt>Can I see usage for the whole team?</dt>
+            <dd>
+              Yes. Penopta estimates tokens from the threads you connect, then rolls them up by plan, person, agent, and project.
+              Look at one person or the whole workspace. These are estimates from transcripts, not provider invoices.
+            </dd>
+          </div>
         </dl>
       </div>
     </section>
 
   </main>
 
-  <!-- 7. Footer -->
+  <!-- 8. Footer -->
   <footer class="footer">
     <div class="container footer__inner">
       <a href="/" class="logo" aria-label="Penopta home">
