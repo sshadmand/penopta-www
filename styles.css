@@ -9,8 +9,6 @@
 :root {
   /* Gradient Labs palette */
   --white: #ffffff;
-  --cream: #faf7f0;
-  --cream-light: #fdfbf7;
   --border: #ede9de;
   --muted: #67675f;
   --charcoal: #383835;
@@ -19,7 +17,6 @@
   --orange-light: #ffa666;
   --orange-dark: #e07020;
   --orange-tint: #fbe8df;
-  --blue-tint: #dee9fa;
 
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -48,10 +45,10 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: var(--black);
-  background: var(--cream);
+  background: var(--white);
   line-height: 1.6;
   background-image:
-    linear-gradient(to right, rgba(103, 103, 95, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in srgb, var(--muted) 6%, transparent) 1px, transparent 1px);
   background-size: 120px 100%;
 }
 
@@ -68,7 +65,7 @@ body {
   padding: 1.25rem 0;
   position: sticky;
   top: 0;
-  background: rgba(250, 247, 240, 0.92);
+  background: color-mix(in srgb, var(--white) 92%, transparent);
   backdrop-filter: blur(12px);
   z-index: 10;
 }
@@ -147,8 +144,8 @@ body {
 /* Wireframe placeholders */
 
 .wireframe-box {
-  border: 1px solid rgba(255, 137, 51, 0.18);
-  background: linear-gradient(145deg, var(--orange-tint) 0%, #fff4ec 100%);
+  border: 1px solid color-mix(in srgb, var(--orange) 18%, transparent);
+  background: linear-gradient(145deg, var(--orange-tint) 0%, var(--white) 100%);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -162,8 +159,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(103, 103, 95, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(103, 103, 95, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in srgb, var(--muted) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--muted) 5%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
 }
@@ -408,7 +405,7 @@ body {
   font-size: 0.8125rem;
   letter-spacing: -0.01em;
   color: var(--charcoal);
-  background: var(--cream-light);
+  background: var(--white);
 }
 
 .stats-chip--muted {
@@ -426,7 +423,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.85rem 1rem;
-  background: var(--cream-light);
+  background: var(--white);
 }
 
 .stats-card__label {
@@ -601,7 +598,7 @@ body {
 .stats-bars__track {
   height: 0.625rem;
   border-radius: 3px;
-  background: var(--cream);
+  background: var(--white);
   overflow: hidden;
 }
 
@@ -817,6 +814,7 @@ body {
   color: var(--black);
   text-underline-offset: 2px;
 }
+
 
 /* Responsive */
 

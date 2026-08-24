@@ -57,7 +57,7 @@ Use these CSS custom properties everywhere. Do not introduce new hues without a 
 - **Primary action:** `--orange` background, `--black` text.
 - **Secondary action:** `--white` or transparent with `--border` outline, `--black` text.
 - **Destructive:** not defined in brand yet — use `--black` text + border until a red is added.
-- **Do not use** `--blue-tint` or illustration gradients in the web app.
+- **Do not use** illustration gradients in the web app.
 
 ---
 
@@ -176,7 +176,7 @@ When mirroring the landing “label + content” pattern (e.g. Problem & solutio
 
 ### Top navigation bar
 
-- Background: `rgba(250, 247, 240, 0.92)` + `backdrop-filter: blur(12px)`.
+- Background: `color-mix(in srgb, var(--cream) 92%, transparent)` + `backdrop-filter: blur(12px)`.
 - Border: none on bar; optional `1px solid var(--border)` bottom.
 - Logo height: **24px** (landing uses 28px).
 - Links: 12px, black, no underline.
@@ -267,7 +267,7 @@ If reused inside app:
 - Minimum touch target: 36×36px.
 - Focus visible on all interactive elements (outline or ring).
 - Body text contrast: black on cream and on white passes WCAG AA.
-- Orange buttons: black text on `#ff8933` — verify contrast for small 13px labels.
+- Orange buttons: black text on `var(--orange)` — verify contrast for small 13px labels.
 
 ---
 
