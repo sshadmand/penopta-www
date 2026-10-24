@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -209,6 +209,84 @@
           <article class="card card--vertical">
             <h3>Ask the numbers</h3>
             <p>Ask what the team ran last week, and which plan used the most tokens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3b. Skills -->
+    <section class="skills">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="chip">Skills</span>
+          <h2>What one agent learns, every agent knows.</h2>
+          <p class="section-header__description">
+            Penopta turns your team's threads into skills and rules — the fixes, corrections, and
+            conventions that worked — and shares them with every agent in the workgroup.
+          </p>
+        </div>
+
+        <div
+          class="skills-flow"
+          role="img"
+          aria-label="Example: a correction in one agent thread becomes a shared skill, which the Mac app writes into each teammate's repo"
+        >
+          <div class="skills-step">
+            <p class="skills-step__label">1 · A thread</p>
+            <div class="skills-bubble">Fix the webhook retry bug.</div>
+            <div class="skills-bubble skills-bubble--agent">Re-serialized the JSON body and re-signed it.</div>
+            <div class="skills-bubble">No, verify on the raw body. Never re-serialize.</div>
+          </div>
+
+          <span class="skills-arrow" aria-hidden="true">→</span>
+
+          <div class="skills-step">
+            <p class="skills-step__label">2 · A shared skill</p>
+            <div class="skills-card">
+              <p class="skills-card__title">Debug failed webhook deliveries</p>
+              <p class="skills-card__when">Use when a webhook delivery fails or retries.</p>
+              <ol class="skills-card__steps">
+                <li>Reproduce with the stored payload.</li>
+                <li>Verify the signature on the raw body.</li>
+                <li>Re-run the delivery and check the log.</li>
+              </ol>
+            </div>
+            <div class="skills-rule">
+              <span>Rule</span> Signatures use the raw body; never re-serialize JSON.
+            </div>
+          </div>
+
+          <span class="skills-arrow" aria-hidden="true">→</span>
+
+          <div class="skills-step">
+            <p class="skills-step__label">3 · Every teammate's repo</p>
+            <ul class="skills-tree">
+              <li>api-service/</li>
+              <li class="skills-tree__dir">.claude/skills/</li>
+              <li class="skills-tree__file skills-tree__file--new">penopta-payments-webhooks/</li>
+              <li class="skills-tree__dir">.claude/rules/</li>
+              <li class="skills-tree__file skills-tree__file--new">penopta-payments.md</li>
+              <li class="skills-tree__dir">.cursor/rules/</li>
+              <li class="skills-tree__file skills-tree__file--new">penopta-payments.mdc</li>
+              <li class="skills-tree__dir">.agents/skills/</li>
+              <li class="skills-tree__file skills-tree__file--new">penopta-payments-webhooks/</li>
+            </ul>
+            <p class="skills-step__note">Claude Code, Cursor, and Codex pick them up the next time they open the repo.</p>
+          </div>
+        </div>
+
+        <div class="card-grid card-grid--3 stats-points">
+          <article class="card card--vertical">
+            <h3>Learned from real work</h3>
+            <p>Penopta reads the threads you sync and keeps what worked — especially the moments you corrected an agent.</p>
+          </article>
+          <article class="card card--vertical">
+            <h3>Shared by the workgroup</h3>
+            <p>Everyone who can see the workgroup gets its skills. Edit one, turn it off, or roll back anytime.</p>
+          </article>
+          <article class="card card--vertical">
+            <h3>Lands where agents look</h3>
+            <p>The Penopta Mac app writes them into each teammate's repos, kept out of git unless you choose to commit them. Turn it off anytime.</p>
           </article>
         </div>
       </div>
